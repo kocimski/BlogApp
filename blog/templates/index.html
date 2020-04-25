@@ -1,0 +1,32 @@
+{%  extends 'base.html' %}
+
+{%  block content %}
+    <div class="container">
+        <div class="row">
+
+            {% for post in postshtml %}
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="{{ post.image.url }}" alt="Card image cap">
+                            <h3><a href = "/post/{{ post.slug }}">{{ post.title }}</a></h3>
+                        </div>
+                        <p>{{ post.summary }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{#    {% for post in postshtml %}#}
+{#        <div>#}
+{#            <h3>{{ post.title }}</h3>#}
+{#            <p>{{ post.summary }}</p>#}
+{#            <hr>#}
+{##}
+{#        </div>#}
+{#    {% endfor %}#}
+
+{%   endblock content %}
+
+
+
+

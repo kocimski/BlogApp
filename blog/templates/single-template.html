@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{%  block content %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            {%  for post in postshtml2 %}
+                    <div>
+                        <div class="summary-title"><a href="/post/{{ post.slug }}">{{ post.title }}</a></div>
+                        <div class="summary">{{ post.summary }}</div>
+                    </div>
+            {%  endfor %}
+        </div>
+        <div class="col-md-10">
+            {% block entry  %}{% endblock %}
+        </div>
+    </div>
+    </div>
+{%  endblock %}
